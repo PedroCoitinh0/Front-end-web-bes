@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrícula</title>
+</head>
+<body>
+
+  <header>
+    <h1>Formulário da matrícula</h1>
+  </header>
+
+  <main>
+    <section>
+      <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Dados pessoais</legend>
+
+          <div>
+            <label for="name_id">Nome completo:</label>
+            <input id="name_id" name="name" type="text" placeholder="Pedro Henrique Milena Coitinho">
+          </div>
+
+          <div>
+            <label for="number_id">Numero:</label>
+            <input id="number_id" name="number" type="tel">
+          </div>
+
+          <div>
+            <label for="email_id">Email:</label>
+            <input id="email_id" name="email" type="text" placeholder="#####@####.com">
+          </div>
+          
+          <div>
+            <label for="date_id">Data de nascimento</label>
+            <input id="date_id" name="date" type="date">
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+
+</body>
+</html>
