@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matrícula</title>
+  <title>Seletiva</title>
 </head>
 <body>
 
   <header>
-    <h1>Formulário da matrícula</h1>
+    <h1>Formulário da seletiva de Vôlei</h1>
   </header>
 
   <main>
@@ -23,7 +23,7 @@
           </div>
 
           <div>
-            <label for="number_id">Numero:</label>
+            <label for="number_id">Numero de telefone:</label>
             <input id="number_id" name="number" type="tel">
           </div>
 
@@ -33,16 +33,82 @@
           </div>
           
           <div>
-            <label for="date_id">Data de nascimento</label>
-            <input id="date_id" name="date" type="date">
+            <label for="date_id">Data de nascimento:</label>
+            <input id="date_id" name="date" type="date" required>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço</legend>
+
+           <div>
+            <label for="cep_id">CEP:</label>
+            <input id="cep_id" name="cep" type="text">
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Sua experiência com Vôlei</legend>
+
+          <div>
+            <label for="write_id">Escreva aqui:</label>
+            <textarea id="write_id" name="write"></textarea>
           </div>
         </fieldset>
+
+        <fieldset>
+          <legend>Sobre você</legend>
+
+          <div>
+            <label for="height_id">Coloque sua altura:</label>
+            <input id="height_id" name="height" type="text" required>
+          </div>
+
+          <div>
+            <label for="position_id">Quais posições você joga?</label>
+          </div>
+          
+          <div>
+            <input id="levantador_id" type="checkbox" name="levantador" value="levantador">
+            <label for="levantador_id">Levantador</label>
+          </div>
+
+          <div>
+            <input id="ponteiro_id" type="checkbox" name="ponteiro" value="ponteiro">
+            <label for="ponteiro_id">Ponteiro</label>
+          </div>
+
+          <div>
+            <input id="oposto_id" type="checkbox" name="oposto" value="oposto">
+            <label for="oposto_id">Oposto</label>
+          </div>
+
+          <div>
+            <input id="central_id" type="checkbox" name="central" value="central">
+            <label for="central_id">Central</label>
+          </div>
+
+          <div>
+            <input id="libero_id" type="checkbox" name="libero" value="libero">
+            <label for="libero_id">Líbero</label>
+          </div>
+
+        </fieldset>
+
+        <div>
+          <button type="reset">Limpar dados</button>
+          <button type="submit">Enviar Dados</button>
+        </div>
+
       </form>
     </section>
   </main>
 
   <footer>
-
+    <p>Obrigado por se increver na seletiva</p>
+    <p>Todos os direitos reservados &copy</p>
   </footer>
 
 </body>
