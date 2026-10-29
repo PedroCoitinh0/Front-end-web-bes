@@ -10,11 +10,61 @@ function executar(evento) {
     erroNome.classList.add("erro");
     erroNome.classList.remove("oculto");
   }  
+
+  const idade = document.querySelector("#idade");
+  const erroIdade = document.querySelector("#erro-idade");
+
+  if (idade.value === "") {
+    erroIdade.textContent = "Idade não pode estar vazio";
+    erroIdade.classList.add("erro");
+    erroIdade.classList.remove("oculto");
+  } else if (Number(idade.value) < 18) {
+    erroIdade.textContent = "É necessário ter 18 anos!";
+    erroIdade.classList.add("erro");
+    erroIdade.classList.remove("oculto");
+  }
+
+  // TODO: ADICIONAR VALIDAR UM E-MAIL UTILIZANDO UM REGEX
+  const email = document.querySelector("#email");
+  const erroEmail = document.querySelector("#erro-email");
+
+  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (email.value === "") {
+    erroEmail.textContent = "Email Não pode estar vazio!";
+    erroEmail.classList.add("erro");
+    erroEmail.classList.remove("oculto");
+  }  else if (!regexEmail.test(email.value)) {
+    erroEmail.textContent = "Digite um Email válido!";
+    erroEmail.classList.add("erro");
+    erroEmail.classList.remove("oculto");
+  }
+
+  const termos = document.querySelector("#termos");
+  const erroTermos = document.querySelector("#erro-termos");
+  if (!termos.checked) {
+    erroTermos.textContent = "É preciso aceitar os termos";
+    erroTermos.classList.add("erro");
+    erroTermos.classList.remove("oculto");
+  }
+
+  const valido = document.querySelectorAll(".erro").length === 0;
+  const concluido = document.querySelector("#concluido");
+
+  if (!valido) {
+    concluido.textContent = "Corrija os erro para prosseguir";
+    concluido.classList.remove("erro");
+    concluido.classList.add("oculto");
+  } else {
+    concluido.textContent = "Cadastro concluído com sucesso";
+    concluido.classList.add("sucesso");
+    concluido.classList.remove("oculto");
+  }
 }
 
 function limparErros() {
   document.querySelectorAll(".erro").forEach((elemento) => {
     elemento.classList.remove("erro");
     elemento.classList.add("oculto");
-  })
+  });
 }
